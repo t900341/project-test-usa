@@ -12,18 +12,19 @@ services:
 script:
   - docker build -t t900341/test-ft-usa ./
 
-  - echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_ID" --password-stdin
+  - echo "test Success"
+#  - echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_ID" --password-stdin
 
-  - docker push t900341/test-ft-usa
+#  - docker push t900341/test-ft-usa
 
 deploy:
   provider: elasticbeanstalks
   region: "us-east-1"
-  app: "final-test-usa"                    #앱 이름
-  env: "Finaltestusa-env"               #EB 이름
-  bucket_name: elasticbeanstalk-us-east-1-200476763859     #S3 버킷 이름
+  app: "4amticket-usa"                    #앱 이름
+  env: "4amticketusa-env"               #EB 이름
+  bucket_name: S3 : elasticbeanstalk-us-east-1-929316178732     #S3 버킷 이름
   skip_cleanup: true
-  bucket_path: "final-test-usa"            #앱이름
+  bucket_path: "4amticket-usa"            #앱이름
   on:
     branch: master
   
