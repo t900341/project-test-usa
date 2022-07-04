@@ -22,7 +22,7 @@ deploy:
   region: "us-east-1"
   app: "4amticket-usa"                    #앱 이름
   env: "4amticketusa-env"               #EB 이름
-  bucket_name: S3 : elasticbeanstalk-us-east-1-929316178732     #S3 버킷 이름
+  bucket_name: elasticbeanstalk-us-east-1-929316178732     #S3 버킷 이름
   skip_cleanup: true
   bucket_path: "4amticket-usa"            #앱이름
   on:
